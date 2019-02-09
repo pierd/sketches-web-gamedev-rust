@@ -1,0 +1,5 @@
+*/dist
+*/target
+**/*.rs.bk
+*/node_modules
+rust-webgl/pkg
