@@ -1,0 +1,27 @@
+<html>
+<head>
+
+<script lang="javascript">
+    "use strict"
+    import("./pkg/mini_wasm.js")
+    .then((module) => {
+        module.default().then(function(obj){
+            let core = new module.Core("content")
+            core.start()
+        }).catch(function(e){
+            console.error("Failed to init module:", e)
+        })
+    }).catch(function(e) {
+        console.error("Failed to load:", e)
+    });
+</script>
+
+<title>mini-wasm</title>
+
+</head>
+<body>
+
+<div id="content"></div>
+
+</body>
+</html>
